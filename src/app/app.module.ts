@@ -8,10 +8,12 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import {DecimalPipe} from '@angular/common';
+import { NavbarComponent } from './navbar/navbar.component';
 @NgModule({
   declarations: [
     AppComponent,
-    SonglistComponent
+    SonglistComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
