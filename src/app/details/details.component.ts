@@ -51,7 +51,7 @@ export class DetailsComponent implements OnInit {
       this.detailsno=data;
       if(data!="-1"){
       this.showdata=this.sidedetailsdata[this.detailsno];
-      console.log(this.showdata)
+     
     }
     });
   }

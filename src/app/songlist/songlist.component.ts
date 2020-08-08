@@ -22,11 +22,12 @@ export class SonglistComponent implements OnInit {
   selectedRow;
   changedval: any;
 
+
   constructor(private appservice: AppserviceService,private pipe: DecimalPipe) { this.setClickedRow = function(index){
     this.selectedRow = index;
 }
 this.appservice.getsong().subscribe(data=>{
-  console.log(data);
+ 
   data['feed'].entry.forEach(ele => {
     this.data.push({
       label:ele.rights.label,
@@ -48,6 +49,7 @@ this.appservice.getsong().subscribe(data=>{
     })
  
   })
+  
   }
 
   ngOnInit(){
@@ -55,7 +57,7 @@ this.appservice.getsong().subscribe(data=>{
     
   }
   
-
+  
   details(i){
     this.appservice.flagtrue(i);
       }
