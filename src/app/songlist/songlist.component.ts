@@ -2,8 +2,6 @@ import { Component,PipeTransform , OnInit } from '@angular/core';
 import { AppserviceService } from '../appservice.service';
 import { DecimalPipe } from '@angular/common';
 import { FormGroup,FormControl } from '@angular/forms';
-import { Observable,of } from 'rxjs';
-import { map, startWith } from 'rxjs/operators';
 
 
 
@@ -37,7 +35,6 @@ this.appservice.getsong().subscribe(data=>{
     });
   });
   
-  // this.data$=this.data;
 
 
 })
@@ -52,11 +49,8 @@ this.appservice.getsong().subscribe(data=>{
   
   }
 
-  ngOnInit(){
-
-    
+  ngOnInit(){  
   }
-  
   
   details(i){
     this.appservice.flagtrue(i);
