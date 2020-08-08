@@ -9,11 +9,15 @@ import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import {DecimalPipe} from '@angular/common';
 import { NavbarComponent } from './navbar/navbar.component';
+import { DetailsComponent } from './details/details.component';
+import { SearchPipe } from './search.pipe';
 @NgModule({
   declarations: [
     AppComponent,
     SonglistComponent,
-    NavbarComponent
+    NavbarComponent,
+    DetailsComponent,
+    SearchPipe
   ],
   imports: [
     BrowserModule,

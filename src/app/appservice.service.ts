@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 import { FormControl } from '@angular/forms';
 
 @Injectable({
@@ -21,7 +21,7 @@ export class AppserviceService {
     this.filterval.next(val);
   }
  
-  getsong(){
+  getsong(): Observable<any>{
    return  this.https.get('https://itunes.apple.com/us/rss/topalbums/limit=100/json');
   }
 }
