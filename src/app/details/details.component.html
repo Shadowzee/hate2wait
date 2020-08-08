@@ -1,12 +1,22 @@
 <div  class="sidecontainer" >
 
     <div class="des">
-        no description yet <a class="adddes">+ Add Description</a>
+      Description Below
     </div>
     <div *ngIf="flag">
-    <div *ngFor="let item of sidedetailsdata[detailsno].list">
+        <label>Image:</label>
+        <div><img [src]="showdata['im:image'][0].label" /></div>
+        <label>Link:</label>
+        <div><a [href]="showdata.id.label">{{showdata.id.label}}</a></div>
+        <br />
+        <label>Release Date:</label>
+        <div>{{showdata['im:releaseDate'].attributes.label}}</div>
+        <br />
+        <label>Item Count:</label>
+        <div>{{showdata['im:itemCount'].label}}</div>
+    <!-- <div *ngFor="let item of sidedetailsdata[detailsno]">
         <div class="details"> {{item}} </div>
-    </div>
+    </div> -->
     </div>
     
     </div>

@@ -35,8 +35,13 @@ const sidedetailsdata = [
 export class DetailsComponent implements OnInit {
   flag=false;
   detailsno;
-  sidedetailsdata=sidedetailsdata;
-  constructor(private tableser: AppserviceService) { }
+  sidedetailsdata;
+  showdata: any;
+  constructor(private tableser: AppserviceService) {
+    this.tableser.getsong().subscribe(data=>{
+      this.sidedetailsdata=data.feed.entry;
+    })
+   }
 
   ngOnInit(): void {
     this.tableser.detailsflag.subscribe(data=>{
@@ -44,6 +49,10 @@ export class DetailsComponent implements OnInit {
     });
     this.tableser.detailsno.subscribe(data=>{
       this.detailsno=data;
+      if(data!="-1"){
+      this.showdata=this.sidedetailsdata[this.detailsno];
+      console.log(this.showdata)
+    }
     });
   }
 

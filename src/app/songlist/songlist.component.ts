@@ -30,7 +30,9 @@ this.appservice.getsong().subscribe(data=>{
   data['feed'].entry.forEach(ele => {
     this.data.push({
       label:ele.rights.label,
-      title:ele.title.label
+      title:ele['im:name'].label,
+      price:ele['im:price'].label,
+      artist:ele['im:artist'].label
     });
   });
   
